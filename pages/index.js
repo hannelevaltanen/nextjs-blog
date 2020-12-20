@@ -4,6 +4,7 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
+import { motion } from 'framer-motion'
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData()
@@ -21,8 +22,13 @@ export default function Home({ allPostsData }) {
 
       {/* Add this <section> tag below the existing <section> tag */}
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
-        <h2 className={utilStyles.headingLg}>Blog</h2>
-        <ul className={utilStyles.list}>
+        <motion.h2
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }} className={utilStyles.headingLg}>
+          Blog
+        </motion.h2>
+        <motion.ul className={utilStyles.list} layoutId="title">
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
@@ -34,7 +40,7 @@ export default function Home({ allPostsData }) {
               </small>
             </li>
           ))}
-        </ul>
+        </motion.ul>
       </section>
     </Layout>
   )
