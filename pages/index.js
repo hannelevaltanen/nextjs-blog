@@ -22,7 +22,7 @@ export default function Home({ allPostsData }) {
       {/* Keep the existing code here */}
 
       {/* Add this <section> tag below the existing <section> tag */}
-      <section className={`${styles.container} ${styles.containerPost} ${utilStyles.headingMd} $`}>
+      <section className={`${utilStyles.headingMd} $`}>
         <motion.h2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}

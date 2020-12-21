@@ -34,7 +34,7 @@ export default function Layout({ children, home }) {
                             alt={name}
                         />
                         <motion.h1 layoutId="title" className={utilStyles.heading2Xl}>{name}</motion.h1>
-                        <div className={styles.containerPost}>
+                        <div className={`${styles.containerPost}`}>
                             <motion.p className={styles.lead}
                                 initial={{ opacity: 0 }}
                                 animate={{ opacity: 1 }}
