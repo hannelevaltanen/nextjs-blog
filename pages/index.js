@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Layout, { siteTitle } from '../components/layout'
+import styles from '../components/layout.module.css'
 import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
@@ -21,23 +22,26 @@ export default function Home({ allPostsData }) {
       {/* Keep the existing code here */}
 
       {/* Add this <section> tag below the existing <section> tag */}
-      <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
+      <section className={`${styles.container} ${styles.containerPost} ${utilStyles.headingMd} $`}>
         <motion.h2
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }} className={utilStyles.headingLg}>
-          Blog
+          Cases
         </motion.h2>
-        <motion.ul className={utilStyles.list} layoutId="title">
+        <motion.ul className={utilStyles.list} layoutId="post">
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>
                 <a>{title}</a>
               </Link>
               <br />
-              <small className={utilStyles.lightText}>
+              <motion.small
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.2 }} className={utilStyles.lightText}>
                 <Date dateString={date} />
-              </small>
+              </motion.small>
             </li>
           ))}
         </motion.ul>

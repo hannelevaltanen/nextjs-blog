@@ -5,11 +5,11 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 const name = 'Hannele Valtanen'
-export const siteTitle = 'Next.js Sample Website'
+export const siteTitle = 'Portfolio'
 
 export default function Layout({ children, home }) {
     return (
-        <div className={styles.container}>
+        <div>
             <Head>
                 <link rel="icon" href="/favicon.ico" />
                 <meta
@@ -25,7 +25,7 @@ export default function Layout({ children, home }) {
                 <meta name="og:title" content={siteTitle} />
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
-            <header className={styles.header}>
+            <header className={home? styles.headerHome : styles.header}>
                 {home ? (
                     <>
                         <motion.img layoutId="profile"
@@ -33,7 +33,15 @@ export default function Layout({ children, home }) {
                             className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
                             alt={name}
                         />
-                        <h1 className={utilStyles.heading2Xl}>{name}</h1>
+                        <motion.h1 layoutId="title" className={utilStyles.heading2Xl}>{name}</motion.h1>
+                        <div className={styles.containerPost}>
+                            <motion.p className={styles.lead}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 0.2 }}>
+                                Hello, I’m Hannele. UX/UI Designer and Frontend Developer from Finland. I am passionate about human centered, accessible and beautiful design. I love to learn all the new things. You can find my experiments also on Github, Dribbble and Codepen. Let's connect via Twitter and LinkedIn.
+                            </motion.p>
+                        </div>
                     </>
                 ) : (
                         <>
@@ -46,17 +54,19 @@ export default function Layout({ children, home }) {
                                     />
                                 </a>
                             </Link>
-                            <h2 className={utilStyles.headingLg}>
+                            <motion.h2 className={utilStyles.headingLg} layoutId="title">
                                 <Link href="/">
                                     <a className={utilStyles.colorInherit}>{name}</a>
                                 </Link>
-                            </h2>
+                            </motion.h2>
                         </>
                     )}
             </header>
-            <main>{children}</main>
+            <main className={`${styles.container} ${styles.containerPost}`}>
+                {children}
+            </main>
             {!home && (
-                <div className={styles.backToHome}>
+                <div className={`${styles.container} ${styles.containerPost}`}>
                     <Link href="/">
                         <a>← Back to home</a>
                     </Link>
