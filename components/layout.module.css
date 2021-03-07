@@ -21,23 +21,108 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
 }
-
+@media (min-height: 100em) {
+	.headerHome {
+		height: 100vh;
+		min-height: 60rem;
+	}
+}
 .headerImage {
+	position: relative;
+	z-index: 1;
 	width: 6rem;
 	height: 6rem;
 }
 
 .headerHomeImage {
+	position: relative;
+	z-index: 1;
 	width: 8rem;
 	height: 8rem;
+	margin-top: 1rem;
 }
 
 .backToHome {
-	margin: 3rem 0 0;
+	margin: 3rem 2rem 0;
+	color: black;
 }
 
 .lead {
 	max-width: 40rem;
+	font-family: "FreightBig Pro", serif;
+	max-width: 720px;
+	max-width: 45rem;
+	font-size: 28.8px;
+	font-size: 1.8rem;
+	line-height: 1.8;
+	padding: 32px;
+	padding: 2rem;
+	margin: 128px 0;
+	margin: 8rem 0;
+}
+@media (min-width: 60em) {
+	.lead {
+		padding: 0;
+		margin: 8rem 2rem 2rem auto;
+		margin: auto;
+	}
+}
+
+.update {
+	display: none;
+}
+
+@media (min-width: 60em) {
+	.update {
+		display: block;
+		position: absolute;
+		left: 3rem;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		-webkit-writing-mode: vertical-lr;
+		-ms-writing-mode: tb-lr;
+		writing-mode: vertical-lr;
+		font-size: .8rem;
+		font-family: sofia-pro, sans-serif;
+		font-weight: 400;
+	}
+}
+
+.siteTitle,
+.siteSubtitle {
+	width: 64px;
+	width: 4rem;
+	position: absolute;
+	top: 48px;
+	top: 3rem;
+	margin: 0;
+	font-size: 12.8px;
+	font-size: .8rem;
+	font-family: sofia-pro, sans-serif;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+@media (min-width: 60em) {
+	.siteTitle,
+	.siteSubtitle {
+		width: auto;
+	}
+}
+.siteTitle {
+	z-index: 1;
+	text-align: right;
+	left: 48px;
+	left: 3rem;
+}
+
+.siteSubtitle {
+	right: 48px;
+	right: 3rem;
+}
+
+.siteLogo {
+	position: absolute;
+	top: 2.2rem;
 }
