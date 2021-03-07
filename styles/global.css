@@ -6,7 +6,10 @@ body {
 		Droid Sans, Helvetica Neue, sans-serif;
 	line-height: 1.6;
 	font-size: 18px;
-	background: #f4f4f4;
+	background: #cde2ee;
+	background: -webkit-gradient(linear, left top, right top, color-stop(50%, #cde2ee), color-stop(50%, #f4f4f4));
+	background: linear-gradient(90deg, #cde2ee 50%, #f4f4f4 0);
+	color: #312720;
 }
 
 * {

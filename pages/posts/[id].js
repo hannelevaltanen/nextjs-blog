@@ -30,12 +30,16 @@ export default function Post({ postData }) {
                 <title>{postData.title}</title>
             </Head>
             <article className={`${styles.container} ${styles.containerPost}`}>
-                <motion.h1 className={utilStyles.headingXl} layoutId="post">{postData.title}</motion.h1>
+                
+                <small>{postData.client} · {postData.role} · <Date dateString={postData.date} /></small>
+                <h1 className={utilStyles.headingXl} layoutId="post">{postData.title}</h1>
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.2 }} className={utilStyles.lightText}>
-                    <Date dateString={postData.date} />
+
+                    
+
                 </motion.div>
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -43,6 +47,8 @@ export default function Post({ postData }) {
                     transition={{ delay: 0.2 }}
                     dangerouslySetInnerHTML={{ __html: postData.contentHtml }} 
                 />
+
+                <h2 className={`${utilStyles.headingXl} $`}>{postData.tooling}</h2>
             </article>
         </Layout>
     )

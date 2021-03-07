@@ -1,9 +1,9 @@
 .heading2Xl {
 	font-family: Avenir, serif;
 	font-weight: 200;
-	font-size: 10vw;
+	font-size: 8vw;
 	line-height: 1.2;
-	margin: 6rem 0 0;
+	margin: 1rem 0 0;
 }
 
 .headingXl {
@@ -24,6 +24,7 @@
 .headingMd {
 	font-size: 1.2rem;
 	line-height: 1.5;
+	margin-top: -20vh;
 }
 
 .borderCircle {
@@ -42,13 +43,68 @@
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	margin-bottom: 160px;
+	margin-bottom: 10rem;
+	display: flex;
 	display: grid;
-	grid-template-columns: 1fr 1fr;
-	grid-gap: 1rem;
+	grid-template-columns: 1fr;
+}
+@media (min-width: 60em) {
+	.list > :first-child {
+		grid-column: 5/6;
+		grid-row: 1/3;
+	}
+}
+@media (min-width: 60em) {
+	.list {
+		margin-top: -14vh;
+		grid-template-columns: 1fr 3fr 1fr 1fr 3fr 1fr;
+	}
 }
 
 .listItem {
 	margin: 0 0 1.25rem;
+
+	position: relative;
+	transition: 1s;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 3fr;
+}
+
+.listItem:hover {
+	transform: translateY(1rem);
+}
+
+.listItem:hover .listHeading {
+	transform: translateY(-2rem);
+}
+
+@media (min-width: 60em) {
+	.listItem:nth-child(2) {
+		grid-column: 2/3;
+		grid-row: 2/4;
+	}
+}
+@media (min-width: 60em) {
+	.l-grid:nth-child(3) {
+		grid-column: 5/6;
+		grid-row: 4/6;
+	}
+}
+
+.listImage {
+	grid-column: 2/5;
+	grid-row: 1/3;
+}
+
+.listHeading {
+	grid-column: 1/5;
+	grid-row: 1/2;
+	transition: 1s;
+}
+.listHeading small {
+	display: block;
+	font-size: 1rem;
 }
 
 .listItem a {
