@@ -1,5 +1,5 @@
 ---
-title: 'Consistent style for multiple ecommerce sites'
+title: 'Consistent style for B2B and B2C'
 client: 'Helkama'
 date: '2020'
 role: UX/UI, Frontend

@@ -7,4 +7,4 @@ tooling: 'Facilitation, Prototyping, Adobe CC'
 imgUrl: /images/feat-hoito-ohjeet.jpeg
 ---
 
-![Helkama](../images/client-hoito-ohjeet.jpg)
+![Helkama](../images/client-hoito-ohjeet-1.jpg)

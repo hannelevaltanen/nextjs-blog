@@ -7,4 +7,4 @@ tooling: 'Figma, Adobe CC, WordPress/WooCommerce, HTML, CSS/SASS, JavaScript, PH
 imgUrl: /images/feat-aviris.jpg
 ---
 
-![Helkama](../images/client-helkama.jpg)
+![Aviris](../images/client-aviris-1.jpg)

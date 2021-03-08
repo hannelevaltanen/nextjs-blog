@@ -21,11 +21,11 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	min-height: 50rem;
 }
-@media (min-height: 100em) {
+@media (min-height: 80em) {
 	.headerHome {
 		height: 100vh;
-		min-height: 60rem;
 	}
 }
 .headerImage {
@@ -43,14 +43,9 @@
 	margin-top: 1rem;
 }
 
-.backToHome {
-	margin: 3rem 2rem 0;
-	color: black;
-}
-
 .lead {
 	max-width: 40rem;
-	font-family: "FreightBig Pro", serif;
+	font-family: freight-big-pro, serif;
 	max-width: 720px;
 	max-width: 45rem;
 	font-size: 28.8px;
@@ -76,7 +71,7 @@
 @media (min-width: 60em) {
 	.update {
 		display: block;
-		position: absolute;
+		position: fixed;
 		left: 3rem;
 		top: 50%;
 		-webkit-transform: translateY(-50%);
@@ -100,8 +95,6 @@
 	margin: 0;
 	font-size: 12.8px;
 	font-size: .8rem;
-	font-family: sofia-pro, sans-serif;
-	font-weight: 400;
 	text-transform: uppercase;
 }
 @media (min-width: 60em) {
@@ -123,6 +116,11 @@
 }
 
 .siteLogo {
-	position: absolute;
+	position: fixed;
 	top: 2.2rem;
+}
+
+.footer {
+	text-align: center;
+	font-size: 0.9rem;
 }

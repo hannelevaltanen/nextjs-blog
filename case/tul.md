@@ -7,4 +7,4 @@ tooling: 'Facilitation, Prototyping, Adobe CC'
 imgUrl: /images/feat-tul.png
 ---
 
-![Helkama](../images/client-tul.jpg)
+![TUL Logo Design](../images/client-tul-1.png)

@@ -1,9 +1,14 @@
 .heading2Xl {
-	font-family: Avenir, serif;
+	font-family: var(--font-accent);
 	font-weight: 200;
-	font-size: 8vw;
-	line-height: 1.2;
+	font-size: 4rem;
+	line-height: 1;
 	margin: 1rem 0 0;
+}
+@media (min-width: 60em) {
+	.heading2Xl {
+		font-size: 8vw;
+	}
 }
 
 .headingXl {
@@ -141,6 +146,8 @@
 }
 
 .caseHeading {
+	font-family: var(--font-accent);
+	font-weight: 700;
 	position: relative;
 	z-index: 1;
 	line-height: 1.3;
@@ -149,6 +156,26 @@
 	transition: 1s;
 }
 .caseHeading small {
+	font-family: var(--font-primary);
+	font-weight: 800;
+	display: block;
+	text-transform: uppercase;
+	font-size: 0.9rem;
+	margin-bottom: 0.5rem;
+}
+
+/* Article */
+.articleHeader {
+	margin-top: 10rem;
+	margin-bottom: 2rem;
+}
+.articleHeader p {
+	margin: 2rem 0 4rem;
+	max-width: 30rem;
+}
+.articleHeader small {
+	font-family: var(--font-primary);
+	font-weight: 800;
 	display: block;
 	text-transform: uppercase;
 	font-size: 0.9rem;

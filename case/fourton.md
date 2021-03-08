@@ -7,4 +7,7 @@ tooling: 'Sketch, Adobe CC, WordPress, HTML, CSS/SASS, JavaScript, PHP, Docker, 
 imgUrl: /images/feat-fourton.png
 ---
 
-![Helkama](../images/client-fourton.jpg)
+![Fourton Tablet and Mobile](../images/client-fourton-1.jpg)
+
+Check out the site
+[fourton.fi](https://www.fourton.fi/)

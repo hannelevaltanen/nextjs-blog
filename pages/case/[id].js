@@ -1,10 +1,12 @@
 import Layout from '../../components/layout'
 import { getAllPostIds, getPostData } from '../../lib/case'
+import { motion } from 'framer-motion'
+
 import Head from 'next/head'
 import Date from '../../components/date'
+
 import styles from '../../components/layout.module.css'
 import utilStyles from '../../styles/utils.module.css'
-import { motion } from 'framer-motion'
 
 export async function getStaticProps({ params }) {
     const postData = await getPostData(params.id)
@@ -29,26 +31,46 @@ export default function Post({ postData }) {
             <Head>
                 <title>{postData.title}</title>
             </Head>
-            <article className={`${styles.container} ${styles.containerPost}`}>
+            <article className={utilStyles.article}>
                 
-                <small>{postData.client} · {postData.role} · <Date dateString={postData.date} /></small>
-                <h1 className={utilStyles.headingXl} layoutId="post">{postData.title}</h1>
-                <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.2 }} className={utilStyles.lightText}>
-
+                <header className={utilStyles.articleHeader}>
                     
+                    <motion.small
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0 }}
+                        className={utilStyles.caseHeading}>
+                        <Date dateString={postData.date} /> — {postData.client} — {postData.role}
+                    </motion.small>
 
-                </motion.div>
+                    <motion.h1
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.1 }}
+                        className={utilStyles.heading2Xl}>{postData.title}</motion.h1>
+
+                    <motion.p
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: 0.3 }}>
+                        {postData.tooling}
+                    </motion.p>
+
+                </header>
+
                 <motion.div
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    transition={{ delay: 0.2 }}
+                    transition={{ delay: 0.4 }} className={utilStyles.lightText}>
+                </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 0.5 }}
                     dangerouslySetInnerHTML={{ __html: postData.contentHtml }} 
                 />
 
-                <h2 className={`${utilStyles.headingXl} $`}>{postData.tooling}</h2>
             </article>
         </Layout>
     )
