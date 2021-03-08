@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 
 const name = 'Hannele Valtanen'
-export const siteTitle = 'Portfolio'
+export const siteTitle = 'Portfolio — Hannele Valtanen'
 
 export default function Layout({ children, home }) {
     return (
@@ -14,7 +14,7 @@ export default function Layout({ children, home }) {
                 <link rel="icon" href="/favicon.ico" />
                 <meta
                     name="description"
-                    content="Learn how to build a personal website using Next.js"
+                    content="I’m Hannele Valtanen, UX/UI Designer and Frontend Developer from Tampere Finland. I am passionate about human centered, accessible and beautiful design."
                 />
                 <meta
                     property="og:image"
