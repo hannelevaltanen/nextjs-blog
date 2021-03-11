@@ -8,7 +8,3 @@ imgUrl: /images/feat-helkama.jpg
 ---
 
 ![Helkama](../images/client-helkama.jpg)
-
-
-Check out the site
-[helkamavelox.fi](https://www.helkamavelox.fi/)

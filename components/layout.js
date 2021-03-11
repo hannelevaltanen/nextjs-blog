@@ -60,14 +60,15 @@ export default function Layout({ children, home }) {
             <main className={`${styles.container} ${styles.containerPost}`}>
                 {children}
             </main>
-            {!home && (
-                <div className={`${styles.container} ${styles.containerPost}`}>
-                    <Link href="/" className={`${styles.backToHome}`}>
-                        <a>← Back to home</a>
-                    </Link>
-                </div>
-            )}
+
             <footer className={`${styles.container} ${styles.footer}`}>
+                {!home && (
+                    <div className={`${styles.container} ${styles.containerPost}`}>
+                        <Link href="/">
+                            <a className={`${styles.backToHome}`}>← Back</a>
+                        </Link>
+                    </div>
+                )}
                 © Hannele Valtanen 2021
             </footer>
         </div>
