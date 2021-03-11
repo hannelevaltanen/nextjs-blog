@@ -69,6 +69,7 @@ export default function Post({ postData }) {
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.5 }}
                     dangerouslySetInnerHTML={{ __html: postData.contentHtml }} 
+                    className={utilStyles.caseContent}
                 />
 
             </article>

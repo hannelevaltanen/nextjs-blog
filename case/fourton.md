@@ -8,6 +8,3 @@ imgUrl: /images/feat-fourton.png
 ---
 
 ![Fourton Tablet and Mobile](../images/client-fourton-1.jpg)
-
-Check out the site
-[fourton.fi](https://www.fourton.fi/)
