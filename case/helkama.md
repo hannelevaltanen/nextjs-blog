@@ -8,3 +8,5 @@ imgUrl: /images/feat-helkama.jpg
 ---
 
 ![Helkama](../images/client-helkama.jpg)
+
+Visual design of web services according to a corporate style guide, prototyping and front-end development of the service.
