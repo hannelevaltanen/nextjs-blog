@@ -23,7 +23,7 @@
 	align-items: center;
 	min-height: 40rem;
 }
-@media (min-height: 100em) {
+@media (min-height: 700px) {
 	.headerHome {
 		height: 100vh;
 	}
@@ -130,7 +130,13 @@
 
 .backToHome {
 	position: fixed;
-	left: 2rem;
-	bottom: 2rem;
+	left: 1rem;
+	bottom: 1rem;
 	font-size: 0.8rem;
+}
+@media (min-width: 124em) {
+	.backToHome {
+		left: 2rem;
+		bottom: 2rem;
+	}
 }
